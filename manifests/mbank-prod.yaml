@@ -28,8 +28,8 @@ metadata:
   namespace: mbank-prod
 spec:
   hard:
-    cpu: "1"
-    memory: 1G
+    cpu: "4"
+    memory: 4G
     persistentvolumeclaims: "10"
     pods: "2"
     replicationcontrollers: "2"
