@@ -3,5 +3,9 @@ kind: Namespace
 metadata:
   creationTimestamp: null
   name: mbank-prod
+  labels:
+    appcode: mbank
+    env: production
+    owner: mbank-admins
 spec: {}
 status: {}
