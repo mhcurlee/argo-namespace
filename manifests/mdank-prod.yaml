@@ -3,11 +3,11 @@ apiVersion: v1
 kind: Namespace
 metadata:
   creationTimestamp: null
-  name: mbank-prod
+  name: mdank-prod
   labels:
-    appcode: mbank
+    appcode: mdank
     env: production
-    owner: mbank-admins
+    owner: mdank-admins
 spec: {}
 status: {}
 
@@ -17,7 +17,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: deploy-sa
-  namespace: mbank-prod
+  namespace: mdank-prod
 
 
 ---
@@ -25,7 +25,7 @@ apiVersion: v1
 kind: ResourceQuota
 metadata:
   name: default-quota
-  namespace: mbank-prod
+  namespace: mdank-prod
 spec:
   hard:
     cpu: "4"
