@@ -18,3 +18,21 @@ kind: ServiceAccount
 metadata:
   name: deploy-sa
   namespace: mbank-prod
+
+
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: default-quota
+  namespace: mbank-prod
+spec:
+  hard:
+    cpu: "1"
+    memory: 1G
+    persistentvolumeclaims: "10"
+    pods: "2"
+    replicationcontrollers: "2"
+    resourcequotas: "1"
+    secrets: "5"
+    services: "3"
