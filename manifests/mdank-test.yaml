@@ -28,8 +28,8 @@ metadata:
   namespace: mdank-test
 spec:
   hard:
-    cpu: "4"
-    memory: 4G
+    cpu: "8"
+    memory: 8G
     persistentvolumeclaims: "10"
     pods: "2"
     replicationcontrollers: "2"
