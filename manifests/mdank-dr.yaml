@@ -13,3 +13,20 @@ metadata:
   name: deploy-sa
   namespace: mdank-dr
 
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: default-quota
+  namespace: mdank-dr
+spec:
+  hard:
+    cpu: "4"
+    memory: 4G
+    persistentvolumeclaims: "10"
+    pods: "2"
+    replicationcontrollers: "2"
+    resourcequotas: "1"
+    secrets: "5"
+    services: "3"
+
