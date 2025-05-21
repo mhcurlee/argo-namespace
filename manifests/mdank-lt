@@ -1,0 +1,38 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: mdank-lt
+  labels:
+    appcode: mdank
+    env: production
+    owner: mdank-admins
+spec: {}
+status: {}
+
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: deploy-sa
+  namespace: mdank-lt
+
+
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: default-quota
+  namespace: mdank-lt
+spec:
+  hard:
+    cpu: "4"
+    memory: 4G
+    persistentvolumeclaims: "10"
+    pods: "2"
+    replicationcontrollers: "2"
+    resourcequotas: "1"
+    secrets: "5"
+    services: "3"
