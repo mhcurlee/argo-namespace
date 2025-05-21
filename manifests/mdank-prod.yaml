@@ -28,7 +28,7 @@ metadata:
   namespace: mdank-prod
 spec:
   hard:
-    cpu: "4"
+    cpu: "8"
     memory: 4G
     persistentvolumeclaims: "10"
     pods: "2"
